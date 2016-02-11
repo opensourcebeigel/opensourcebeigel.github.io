@@ -1,0 +1,20 @@
+title: "The home of the Open source Beigel"
+email: macorlett@gmail.com
+description: "Our goal here is to provide the world with free and easy beigel recipes, so that we can all make our own at home."
+timezone: Pacific/Auckland
+
+# baseurl:"http://michaelcorlett.me"
+url: "" # "http://michaelcorlett.me"
+port: 4000
+
+# gems
+# gems: [jekyll-paginate]
+
+# Build settings
+future: false
+permalink: pretty
+# paginate: 10
+markdown: kramdown
+# excerpt_separator: "<!-- excerpt ends -->"
+sass:
+  style: :compressed
