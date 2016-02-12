@@ -4,7 +4,7 @@
 	h3,
 	h4,
 	p{
-		//color: $color-white;
+		color: $color-white;
 	}
 	p{
 		font-size: 24px;
@@ -14,67 +14,98 @@
 .landing--header--hero-image{
 	background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("../img/img--beigels-001.jpg") center/cover no-repeat;
 }
-.parallax{
-	perspective: 300px;
-	-webkit-perspective-origin-x: 100%;
-	perspective-origin-x: 100%;
-	height: 100vh;
-	overflow-x: hidden;
-	overflow-y: auto;
-}
-.parallax--group{
-	position: relative;
-	height: 100vh;
-	transform-style: preserve-3d;
-	//transform: translate3d(700px, 0, -800px) rotateY(30deg);
-}
-.parallax--group--solid{
-	height: 500px;
-	background: $color-white;
-}
-.parallax--layer{
-	position: absolute;
-	-webkit-transform-origin-x: 100%;
-	transform-origin-x: 100%;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-.parallax--img{
-	width: 100%;
-	height: auto;
-}
-.parallax--layer--base{
-	z-index: $index-4;
-	transform: translateZ(0);
-}
-.parallax--layer--back{
-	z-index: $index-3;
-	transform: translateZ(-300px) scale(2);
-}
 .flex{
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: center;
 	align-items: stretch;
 }
 .flex--center{
 	align-items: center;
 	justify-content: center;
-	h1,
-	h2,
-	h3,
-	h4,
-	p{
-		text-align: center;
+	text-align: center;
+	h1{
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
 	}
 }
 .flex--container{
+	z-index: $index-1;
+	flex: 1 1 600px;
+}
+.flex--container--header{
 	flex: 0 1 660px;
 }
-#group-1{
-	z-index: $index-3;
+.container--borders{
+	z-index: $index-1;
+	padding: 20px;
+	background: $color-white;
+	position: relative;
+	text-align: left;
 }
-#group-2{
- z-index: $index-5;
+.sub--container{
+	flex: 0 1 600px;
+	box-shadow: 0 1px 10px rgba($color-black,0.2);
+}
+.container--image{
+	background: $color-black;
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+.container--border--top,
+.container--border--left,
+.container--border--right,
+.container--border--bottom{
+	display: none;
+}
+.background--container{
+	z-index: 0;
+	position: absolute;
+	width: 100%;
+	flex: 0 0;
+	top: 10%;
+	left: 0;
+	right: 0;
+	bottom: 10%;
+	background: $color-white;
+}
+
+@media screen and (min-width: 600px){
+	.container--borders{
+		padding: 120px;
+	}
+	.container--border--top,
+	.container--border--left,
+	.container--border--right,
+	.container--border--bottom{
+		position: absolute;
+		display: block;
+	}
+	.container--border--top{
+		top: 60px;
+		left: 30px;
+		right: 30px;
+		border-top: 1px solid $color-grey;
+	}
+	.container--border--bottom{
+		left: 30px;
+		right: 30px;
+		bottom: 60px;
+		border-bottom: 1px solid $color-grey;
+	}
+	.container--border--left{
+		top: 30px;
+		left: 60px;
+		bottom: 30px;
+		border-left: 1px solid $color-grey;
+	}
+	.container--border--right{
+		top: 30px;
+		right: 60px;
+		bottom: 30px;
+		border-right: 1px solid $color-grey;
+	}
 }

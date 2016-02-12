@@ -1,0 +1,51 @@
+#group-1{
+	z-index: $index-1;
+	height: 100vh;
+}
+#group-2{
+ 	z-index: $index-6;
+ 	height: 100vh;
+}
+#group-3{
+	z-index: $index-1;
+}
+.parallax{
+	perspective: 300px;
+	-webkit-perspective-origin-x: 100%;
+	perspective-origin-x: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.parallax--group{
+	position: relative;
+	height: 100vh;
+	transform-style: preserve-3d;
+	//transform: translate3d(700px, 0, -800px) rotateY(30deg);
+}
+.parallax--layer{
+	position: absolute;
+	-webkit-transform-origin-x: 100%;
+	transform-origin-x: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.parallax--layer--padding{
+	padding: 0 20px;
+}
+.parallax--layer--base{
+	z-index: $index-4;
+	transform: translateZ(0);
+}
+.parallax--layer--back{
+	z-index: $index-3;
+	transform: translateZ(-300px) scale(2);
+}
+
+@media screen and (min-width: 800px){
+	.parallax--layer--padding{
+		padding: 0 60px;
+	}
+}

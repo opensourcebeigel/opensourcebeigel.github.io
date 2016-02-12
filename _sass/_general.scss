@@ -3,9 +3,34 @@ h1{
 	font-weight: 400;
 	font-size: 72px;
 	line-height: 72px;
-	margin: 24px;
+	margin: 24px 0;
+	padding: 0;
+}
+h2{
+	font-family: $type-stack-writen;
+	font-size: 40px;
+	line-height: 40px;
+	margin: 0;
+	margin-bottom: 24px;
 	padding: 0;
 }
 p{
 	margin: 24px 0;
+	&:last-child{
+		margin: 24px 0 0;
+	}
+}
+.button{
+	display: inline-block;
+	padding: 0 40px;
+	line-height: 70px;
+	min-height: 70px;
+	border-radius: 2px;
+	background: $color-green;
+	margin: 32px auto;
+	font-size: 24px;
+	font-weight: 300;
+	color: $color-white;
+	text-decoration: none;
+	box-shadow: 0 2px 4px rgba($color-black,0.5);
 }
