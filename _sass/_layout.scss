@@ -1,4 +1,5 @@
 .landing--header{
+	padding: 0 20px;
 	h1,
 	h2,
 	h3,
@@ -6,13 +7,12 @@
 	p{
 		color: $color-white;
 	}
-	p{
-		font-size: 24px;
-		line-height: 42px;
-	}
 }
 .landing--header--hero-image{
 	background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("../img/img--beigels-001.jpg") center/cover no-repeat;
+}
+.landing--parallax--background-2{
+	background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("../img/img--beigels-002.jpg") center/cover no-repeat;
 }
 .flex{
 	display: flex;
@@ -46,7 +46,6 @@
 }
 .sub--container{
 	flex: 0 1 600px;
-	box-shadow: 0 1px 10px rgba($color-black,0.2);
 }
 .container--image{
 	background: $color-black;
@@ -74,8 +73,15 @@
 }
 
 @media screen and (min-width: 600px){
+	.landing--header p{
+		font-size: 24px;
+		line-height: 42px;
+	}
 	.container--borders{
 		padding: 120px;
+	}
+	.sub--container{
+		box-shadow: 0 1px 10px rgba($color-black,0.2);
 	}
 	.container--border--top,
 	.container--border--left,
